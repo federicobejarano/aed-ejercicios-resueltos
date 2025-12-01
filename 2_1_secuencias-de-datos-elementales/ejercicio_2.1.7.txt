@@ -6,3 +6,28 @@ necesita organizarlos de acuerdo al último dígito de su documento, generar una
 los CUIT de las personas que su número de documento termine con 0, 1, 2 o 3.
 
 */
+
+ACCION 2.1.7 ES 
+
+    Ambiente
+
+        sec, sal : secuencia de enteros
+        v : entero
+
+    Proceso
+
+        ARR(sec)
+        AVZ(sec, v)
+        CREAR(sal)
+
+        Mientras v <> 0 Hacer
+            Si (v MOD 10) < 4 entonces
+                ESC(sal, v)
+            FinSi
+
+            AVZ(sec, v)
+        FinMientras
+
+        Cerrar(sec)
+        Cerrar(sal)
+FinAccion

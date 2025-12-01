@@ -1,6 +1,6 @@
 /*
 
-Teniendo en cuenta el ejercicio anterior, se solicita que la secuencia de salida
-sea una secuencia de caracteres y los CUIT se separen unos de otros con el caracter "-".
+Se dispone de una secuencia de caracteres.
+Se desea permita contar la cantidad de palabras que comienzan con una letra dada.
 
 */

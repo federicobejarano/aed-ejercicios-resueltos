@@ -1,0 +1,60 @@
+/*
+
+Teniendo en cuenta el ejercicio anterior, se solicita que la secuencia de salida
+sea una secuencia de caracteres y los CUIT se separen unos de otros con el caracter "-".
+
+*/
+
+ACCION 2.1.7 ES 
+
+    Ambiente
+
+        sec : secuencia de enteros
+        sal : secuencia de caracter
+        v, i, digito : entero
+
+        Funcion Digito_A_Caracter (e : entero) : caracter ES 
+            segun e Hacer
+                =0 : Digito_A_Caracter := "0"
+                =1 : Digito_A_Caracter := "1"
+                =2 : Digito_A_Caracter := "2"
+                =3 : Digito_A_Caracter := "3"
+                =4 : Digito_A_Caracter := "4"
+                =5 : Digito_A_Caracter := "5"
+                =6 : Digito_A_Caracter := "6"
+                =7 : Digito_A_Caracter := "7"
+                =8 : Digito_A_Caracter := "8"
+                =9 : Digito_A_Caracter := "9"
+            FinSegun
+        FinFuncion
+
+        Procedimiento Escribir_Cuit (e : entero) ES
+            Para i := 1 hasta 11 Hacer
+                digito := e MOD 10
+                ESC(sal, Digito_A_Caracter(digito))
+                e := e DIV 10
+            FinPara 
+            
+        FinProcedimiento
+
+    Proceso
+
+        ARR(sec)
+        AVZ(sec, v)
+        CREAR(sal)
+
+        digito := v MOD 10
+
+        Mientras v <> 0 Hacer
+            Si digito < 4 entonces
+                Escribir_Cuit(v)
+            AVZ(sec, v)
+
+            Si v <> 0 entonces
+                ESC(sal, '-')
+            FinSin
+        FinMientras
+
+        Cerrar(sec)
+        Cerrar(sal)
+FinAccion
