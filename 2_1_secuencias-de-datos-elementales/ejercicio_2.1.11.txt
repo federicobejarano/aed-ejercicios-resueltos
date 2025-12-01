@@ -1,0 +1,39 @@
+/*
+
+Dada una secuencia de caracteres, determinar la cantidad de palabras de 4 caracteres (letras)
+
+*/
+
+
+
+
+
+
+// solución propuesta por la cátedra
+
+ACCION Ejercicio_2.1.11 ES
+AMBIENTE
+	sec: secuencia de caracter
+	v: caracter
+	contletras: entero
+	cont_4: entero
+PROCESO
+	cont_4:= 0
+	Arr(sec)
+	Avz(sec,v)
+	Mientras nfds(sec) hacer
+		contletras:= 0
+		Mientras v= ‘ ’ entonces
+			Avz(sec,v)
+		FinMientras
+		Mientras (v<> ‘ ’) ^ NFDS(sec) entonces
+			contletras:= contletras + 1
+Avz(sec,v)
+		FinMientras
+		Si (contletras = 4) Entonces
+			cont_4:= cont_4 + 1
+		FinSi
+	FinMientras
+	Esc(‘La cantidad de palabras con 4 letras son:’, cont_4)
+	cerrar(sec)
+FinAccion

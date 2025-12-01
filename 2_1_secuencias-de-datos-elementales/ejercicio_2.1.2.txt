@@ -1,0 +1,35 @@
+
+/*
+Dada una secuencia de letras del alfabeto que finaliza con la letra "Z",
+contar cuantas consonantes hay en la secuencia.
+*/
+
+ACCION 2.1.2 ES
+
+    Ambiente
+        sec : secuencia de caracter
+        v : caracter
+        cont : entero
+
+        funcion Es_Consonante (c : caracter) : logico ES
+            // funcion aquí
+        FinFuncion
+
+    Proceso
+
+        ARR(sec)
+        AVZ(sec, v)
+        cont := 0
+
+        Mientras v <> 'Z' Hacer
+            Si Es_Consonante(v) Entonces
+                cont := cont + 1
+            FinSin
+
+            AVZ(sec, v)
+        FinMientras
+
+        ESC("La secuencia contiene ", cont, " consonantes")
+        Cerrar(sec)
+
+FinAccion

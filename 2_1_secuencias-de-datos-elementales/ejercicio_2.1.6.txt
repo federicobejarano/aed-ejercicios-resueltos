@@ -1,0 +1,57 @@
+/*
+
+Dada una secuencia de enteros que almacena la cantidad de habitantes de
+las ciudades capitales de las 23 provincias de la República Argentina,
+discriminados 4 categorías: menores de 18 años (varones y mujeres) y
+mayores de 18 años (varones y mujeres). Se pide determinar la población total y
+los siguientes porcentajes: masculinos, femeninos, mayores de 18 y menores de 18.
+
+*/
+
+ACCION 2.1.6 ES
+
+    Ambiente
+        
+        sec : secuencia de entero
+        v, total : entero
+        pmasc, pfem, pmayores, pmenores : decimal
+        cont = (0..3)
+        
+    Proceso
+
+        ARR(sec)
+        AVZ(sec, v)
+
+        total := 0
+        pmasc := 0.0
+        pfem := 0.0
+        pmayores := 0.0
+        pmenores := 0.0
+        cont := 1
+
+        Mientras NFDS (sec) ES
+            total := total + v
+
+            segun cont Hacer
+                =1 : pmenores := pmenores + (v / total) * 100
+                     pmasc := pmasc + (v / total) * 100
+                =2 : pmenores := pmenores + (v / total) * 100
+                     pfem := pfem + (v / total) * 100
+                =3 : pmayores := pmayores + (v / total) * 100
+                     pmasc := pmasc + (v / total) * 100
+                =4 : pmayores := pmayores + (v / total) * 100
+                     pfem := pfem + (v / total) * 100
+            FinSegun
+
+            AVZ(sec, v)
+            cont := (cont + 1) MOD 4
+        FinMientras
+
+        ESC("Porcentaje población masculina: ", pmasc, "%")
+        ESC("Porcentaje población feminina: ", pfem, "%")
+        ESC("Porcentaje mayores de edad: ", pmayores, "%")
+        ESC("Porcentaje menores de edad: ", pmenores, "%")
+
+        Cerrar(sec)
+
+FinAccion

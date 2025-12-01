@@ -1,0 +1,83 @@
+/*
+
+La secuencia de socios del problema anterior tiene el inconveniente de que los números
+están ordenados pero no son correlativos. Se desea generar una secuencia que contenga
+los números de socios que no figuran en la secuencia de socios.
+
+*/
+
+ACCION 2.1.5 ES
+
+    Ambiente
+
+        ent, sal : secuencia de entero
+        v, ant: entero
+
+    Proceso
+
+        ARR(ent)
+        AVZ(ent, v)
+        CREAR(sal)
+        
+        Mientras NFDS (sec)
+            siguiente := v + 1
+            AVZ(sec, v)
+
+            Mientras siguiente < v Hacer
+                ESC(sal, siguiente)
+                siguiente := siguiente + 1
+            FinMientras
+        FinMientras
+
+        Cerrar(ent)
+        Cerrar(sal)
+
+FinAccion
+
+
+
+// resolución propuesta por la cátedra
+
+
+ACCION sec_5_Forma1 ES
+AMBIENTE
+	sec, sal: secuencia de entero
+	v,cont: entero
+PROCESO
+	Crear(sal)
+	Arr(sec)
+	Avz(sec,v)
+	cont:= 1
+	Mientras nfds(sec) hacer
+		Si cont = v entonces
+			avz(sec,v)
+		Sino
+			esc(sal, cont)
+		Finsi
+		cont:= cont + 1
+	FinMientras
+	cerrar(sal)
+	cerrar(sec)
+FinAccion
+
+
+ACCION sec_5_Ciclo ES
+AMBIENTE
+	sec, sal: secuencia de enteros
+	v,cont: entero
+PROCESO
+	Crear(sal)
+	Arr(sec)
+	Avz(sec,v)
+	cont:= 1
+	Mientras nfds(sec) hacer
+		mientras cont < v entonces
+			esc(sal, cont)
+			cont:= cont + 1
+		finMientras
+		avz(sec,v)
+		cont:= cont + 1
+	FinMientras
+	cerrar(sal)
+	cerrar(sec)
+FinAccion

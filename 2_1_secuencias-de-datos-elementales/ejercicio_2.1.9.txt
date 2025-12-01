@@ -1,0 +1,46 @@
+/*
+
+Se dispone de una secuencia de caracteres.
+Se desea determinar la cantidad de palabras que comienzan con la letra 'I'.
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+// solución propuesta por la cátedra
+
+Tarea clase pasada: Ejercicio 2.1.9¶
+Se dispone de una secuencia de caracteres. Se desea determinar la cantidad de palabras que comienzan con la letra 'I'.
+
+
+ACCION Ejercicio_2.1.9 ES
+AMBIENTE
+	sec: secuencia de caracter
+	v: caracter
+	cont: entero
+PROCESO
+	cont:= 0
+	Arr(sec)
+	Avz(sec,v)
+	Mientras nfds(sec) hacer
+		Mientras v= ‘ ’ entonces
+			Avz(sec,v)
+		FinMientras
+		Si v = ‘l’ Entonces
+			cont:= cont + 1
+		FinSi
+		Mientras (v<> ‘ ’) ^ NFDS(sec) entonces
+			Avz(sec,v)
+		FinMientras
+	FinMientras
+	Esc(‘La cantidad de palabras que empiezan con l son:’, cont)
+	cerrar(sec)
+FinAccion

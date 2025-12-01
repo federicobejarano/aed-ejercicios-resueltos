@@ -1,0 +1,36 @@
+
+/*
+
+Dada una secuencia de letras del alfabeto que finaliza con una marca '*',
+contar cuantas letras "A" hay en la secuencia.
+
+*/
+
+ACCION 2.1.1 ES
+
+    Ambiente
+
+        sec : secuencia de caracter
+        v : caracter
+        cont : entero
+
+    Proceso
+
+        ARR (sec)
+        AVZ (sec, v)
+        cont := 0
+
+        Mientras v <> '*' Hacer
+            Si v = 'A' entonces
+                cont :=0 cont +1
+            FinSi
+
+            AVZ (sec, v)
+        FinMientras
+
+        ESC("La secuencia contiene la letra A un total de ", cont, " veces.")
+
+        CERRAR(sec)
+FinAccion
+
+             
