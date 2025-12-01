@@ -1,0 +1,48 @@
+/*
+
+
+A partir de la secuencia del ejercicio 2.01 se desea generar otra secuencia con
+los alumnos de una carrera dada que aprobaron alguna materia este año, con nota mayor a 7 (siete).
+
+*/
+
+ACCION 2.2.4 ES
+
+    AMBIENTE
+
+        Alumno = Registro
+            Apellido_Nombre : AN(50)
+            Carrera : ('ISI', 'IEM', 'IQ')
+            Legajo : N(6)
+            F_Nacimiento : Fecha
+            F_Ingreso : Fecha
+            DNI : N(8)
+            Sexo : ('M', 'F')
+            F_Ultimo_Examen : Fecha
+            Nota : (1..10)
+        FinReg
+
+        Fecha = Registro
+            aa = N(4)
+            mm = N(2)
+            dd = N(2)
+        FinReg
+
+        ent, sal : archivo de Alumno ordenado por Apellido_Nombre
+        alumno : Alumno
+
+    PROCESO
+
+        Abrir E/(ent)
+        Leer(ent, alumno)
+
+        Abrir /S(sal)
+
+        Mientras NFDA (ent) Hacer
+            
+        FinMientras
+
+        Cerrar(ent)
+        Cerrar(sal)
+
+FinAccion

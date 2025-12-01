@@ -1,0 +1,51 @@
+/*
+
+Dada la siguiente secuencia de datos con el siguiente formato:
+
+Nº de socio
+Nº de teléfono
+Apellido y Nombre
+Carrera (ISI - IEM - IQ - LAR)
+Domicilio
+Cantidad de unidades prestadas
+
+Correspondiente a los alumnos socios de la Biblioteca, generar la secuencia de
+los alumnos de “ISI” que tengan prestadas más de 4 unidades bibliográficas.
+
+*/
+
+ACCION 2.2.3 ES
+
+    AMBIENTE
+
+        Socio = Registro
+            Nro : N(5)
+            Telefono : N(10)
+            Apellido_Nombre : AN(50)
+            Carrera : ('ISI', 'IEM', 'IQ', 'LAR')
+            Domicilio : AN(50)
+            Unidades_Prestadas : N(2)
+        FinReg
+
+        ent, sal : archivo de Socio ordenado por Nro
+        socio : Socio
+
+    PROCESO
+
+        Abrir E/(ent)
+        Abrir /S(sal)
+
+        Leer(ent, socio)
+
+        Mientras NFDA (ent) Hacer
+            Si (socio.Carrera = 'ISI') Y (socio.Unidades_Prestadas > 4) entonces
+                ESC(sal, socio)
+            FinSi
+
+            Leer(ent, socio)
+        FinMientras
+
+        Cerrar(ent)
+        Cerrar(sal)
+
+FinAccion

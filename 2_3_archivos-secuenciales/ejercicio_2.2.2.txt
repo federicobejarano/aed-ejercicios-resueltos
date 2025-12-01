@@ -1,0 +1,76 @@
+/*
+
+Se dispone de una secuencia de facturas con los siguientes datos:
+
+- Nº de Factura
+- Fecha
+- Total
+
+Se desea un listado de las facturas cuyas fechas sean posteriores a una fecha dada,
+y cuyos importes totales no alcancen los $1000, con el siguiente formato:
+
+|Nro_Factura|Fecha|Importe_Total|
+
+*/
+
+
+ACCION 2.2.2 ES
+
+    AMBIENTE
+
+        Factura = Registro
+            Nro : N(5)
+            Fecha : Fecha
+            Total : N(6,2)
+        FinReg
+
+        Fecha = Registro
+            aa : N(4)
+            mm : N(2)
+            dd : N(2)  
+        FinReg
+
+        fecha : Fecha
+
+        arch : archivo de Factura ordenado por Nro
+        factura : Factura
+
+        fecha_busqueda : entero
+
+        Procedimiento pedir_fecha() ES
+            Repetir
+                
+            Mientras
+        FinProc
+
+
+    PROCESO
+
+        // pedir fecha de búsqueda de facturas
+        ESC("Mostrar facturas posteriores a...")
+
+        ESC("Ingrese año:")
+        Leer(fecha.aa)
+
+        ESC("Ingrese mes:")
+        Leer(fecha.mm)
+              
+        ESC("Ingrese día:")
+        Leer(fecha.dd)
+
+        // mostrar facturas
+
+        Abrir E/(arch)
+        Leer(arch, factura)
+
+        ESC("|Nro_Factura|Fecha|Importe_Total|")
+        ESC("|-----|-----|-----|")
+
+        Mientras NFDA Y (factura.Fecha > fecha) Y (factura.Total < 1000) Hacer
+            ESC("|", factura.Nro, "|", factura.Fecha, "|$", factura.Total, "|")
+
+            Leer(arch, factura)
+        FinMientras
+
+        Cerrar(arch)
+FinAccion

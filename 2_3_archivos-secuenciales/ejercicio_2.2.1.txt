@@ -3,17 +3,59 @@
 Ejercicio 2.2.1¶
 Se dispone de una secuencia con los datos de los alumnos de la facultad:
 
-Apellido y Nombre
-Carrera (ISI - IEM - IQ)
-Nº de Legajo
-Fecha de Nacimiento
-Fecha de Ingreso
-D.N.I.
-Sexo (M o F)
-Fecha de último examen aprobado
-Nota
+- Apellido y Nombre
+- Carrera (ISI - IEM - IQ)
+- Nº de Legajo
+- Fecha de Nacimiento
+- Fecha de Ingreso
+- D.N.I.
+- Sexo (M o F)
+- Fecha de último examen aprobado
+- Nota
+
 Se desea un listado de los mismos, con el siguiente formato:
 
 |Nro_Legajo|Apellido_Nombre|Documento|Carrera|
 
 */
+
+ACCION 2.2.1 ES
+
+    AMBIENTE
+
+        Alumno = Registro
+            Apellido_Nombre : AN(50)
+            Carrera : ('ISI', 'IEM', 'IQ')
+            Legajo : N(6)
+            F_Nacimiento : Fecha
+            F_Ingreso : Fecha
+            DNI : N(8)
+            Sexo : ('M', 'F')
+            F_Ultimo_Examen : Fecha
+            Nota : (1..10)
+        FinReg
+
+        Fecha = Registro
+            aa = N(4)
+            mm = N(2)
+            dd = N(2)
+        FinReg
+
+        arch : archivo de Alumno ordenado por Apellido_Nombre
+        alumno : Alumno
+
+    PROCESO
+
+        Abrir E/(arch)
+        Leer(arch, alumno)
+
+        ESC("|Nro_Legajo|Apellido_Nombre|Documento|Carrera|")
+        ESC("|-----|-----|-----|-----|")
+
+        Mientras NFDA (arch) Hacer
+            ESC("|", alumno.Legajo, "|", alumno.Apellido_Nombre, "|", alumno.DNI, "|", alumno.Carrera, "|")
+        FinMientras
+
+        Cerrar(arch)
+
+FinAccion
