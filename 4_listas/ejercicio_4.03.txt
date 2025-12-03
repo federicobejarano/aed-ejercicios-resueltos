@@ -1,0 +1,8 @@
+/*
+
+Ejercicio 4.3¶
+Dada una lista simplemente encadenada de números diseñar un algoritmo que calcule en forma independiente:
+La suma de los números impares, y la suma de los números pares.
+
+*/
+
