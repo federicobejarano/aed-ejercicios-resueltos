@@ -6,7 +6,7 @@ Acá llevo el registro de los ejercicios resueltos...
 
 ## 1. **Elementales**
 
-### 1.1. Datos y Estructuras
+### 1.1. [Datos y Estructuras](https://aed-frre.github.io/practica/1.1/)
 
 #### Estructuras Secuenciales
 
@@ -81,3 +81,7 @@ Estos ejercicios requieren estructuras de control más avanzadas, como **bucles 
 |1.1.6|---|
 
 ###### Subacciones
+
+
+### 1.2. [Subacciones](https://aed-frre.github.io/practica/1.1/)
+
