@@ -1,0 +1,7 @@
+/*
+
+Ejercicio 1.1.13¶
+criba un algoritmo que acepte un número entero mayor a 100 y menor a 1000 que representa una suma de dinero e indique cuantos billetes
+de cada denominación necesita, suponiendo que solo existen billetes de 100, 10 y 1 peso.
+
+*/

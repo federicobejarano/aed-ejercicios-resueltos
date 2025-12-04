@@ -1,0 +1,69 @@
+/*
+
+Ejercicio 1.1.5.7¶
+
+Escriba un algoritmo que halle la media geométrica de tres valores 
+
+X, Y, Z
+
+Este debe emitir los tres valores por separado y luego el valor medio. La media geométrica es igual a 
+
+(X×Y×Z)/3
+
+*/
+
+// SOLUCION 1
+
+ACCION 1.1.5.7 ES 
+
+    AMBIENTE
+
+        x, y, z : entero
+        medio : N(3,2)
+
+    PROCESO
+
+        ESC("Ingrese tres valores: ")
+        
+        LEER(x)
+        LEER(y)
+        LEER(z)
+
+        medio := x * y * z
+        medio := medio / 3
+
+        ESC("Valores ingresados: ", x, " - ", y, " - ", z)
+        ESC("Valor medio: ", medio)
+
+FinAccion
+
+
+// SOLUCION 2: USANDO SUBACCIÓN
+
+ACCION 1.1.5.7 ES 
+
+    AMBIENTE
+
+        Funcion Calcular_Medio(x, y, z : entero) : N:(5,2) ES
+            AMBIENTE
+                medio : N(5,2)
+
+            PROCESO
+                medio := x * y * Z
+                medio := medio / 3
+
+                Calcular_Medio := medio
+        FinFuncion
+
+    PROCESO
+
+        ESC("Ingrese tres valores: ")
+        
+        LEER(x)
+        LEER(y)
+        LEER(z)
+
+        ESC("Valores ingresados: ", x, " - ", y, " - ", z)
+        ESC("Valor medio: ", Calcular_Medio(x, y , z))
+
+FinAccion

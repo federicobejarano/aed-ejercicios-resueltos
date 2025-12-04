@@ -8,3 +8,54 @@ como parámetro de entrada la dirección del primer elemento.
 
 */
 
+
+
+
+
+// SOLUCION PROPUESTA POR LA CÁTEDRA
+
+Accion_ACCION42(prim: Puntero a Nodo) ES
+
+    AMBIENTE
+        Nodo = Registro de
+            nro: N(8)
+            prox: Puntero a Nodo
+        Fin_Registro
+
+        p, ant, q, prim2: Puntero a Nodo
+
+        Procedimiento PrimerNodo() es
+            prim:= *p.prox
+            prim2:= p
+            *p.prox:= prim2
+            q:= *p.prox
+        Fin_Procedimiento
+
+        Procedimiento AgregarNodo() es
+            *ant.prox:= *p.prox
+            prim2:= p
+            *p.prox:= prim2
+            q:= *p.prox
+        Fin_Procedimiento
+
+    PROCESO
+
+        prim2:= NIL
+        p:= prim
+        ant:= NIL
+        
+        Mientras (p <> NIL) hacer
+            Si (*p.nro MOD 10) entonces
+                Si (ant = nil) entonces
+                    PrimerNodo()
+                Sino
+                    AgregarNodo()
+                Fin_Si
+
+                p:= q
+            sino
+                ant:= q
+                p:= *p.prox
+            Fin_Si
+        Fin_Mientras
+Fin_Accion

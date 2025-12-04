@@ -1,0 +1,6 @@
+/*
+
+Ejercicio 1.1.29¶
+Escriba un algoritmo para imprimir los números primos menores a un valor dado n.
+
+*/
