@@ -4,3 +4,92 @@ Ejercicio 1.1.6¶
 Escriba un algoritmo que permita ingresar 3 valores numéricos y determine cuál es el mayor, el medio y el menor. (era el 3 de los complementarios)
 
 */
+
+ACCION 1.1.6 ES 
+    AMBIENTE
+
+        a, b, c, aux : entero
+
+    PROCESO
+
+        ESC("Ingrese tres valores: ")
+        LEER(a)
+        LEER(b)
+        LEER(c)
+
+        ESC("Los números introducidos son: ", a, b, c)
+
+        // ordenar de menor a mayor por comparación
+        // nota: no considera valores repetidos
+
+        Si a > b entonces
+            aux := b
+            b := a
+            a := aux
+        FinSi
+
+        Si b > c entonces
+            aux := c 
+            c := b 
+            b := aux
+        FinSi
+
+        // mostrar según: mayor - medio - menor
+        // nota: considera valores repetidos
+
+        ESC("Los números en orden son: ")
+
+        Si a <> b entonces
+            Si b <> c entonces
+                ESC("- Mayor: ", c)
+                ESC("- Medio: ", b)
+                ESC("- Menor: ", a)
+            Sino
+                ESC("- Mayor: ", b)
+                ESC("- Menor: ", a)
+                ESC("No hay un tercer valor distinto.")
+            FinSi
+        Sino
+            Si b <> c entonces
+                ESC("Mayor: ", c)
+                ESC("Menor: ", b)
+                ESC("No hay un tercer valor distinto.")
+            Sino
+                ESC("Único valor: ", a)
+            FInSi
+        FinSi
+FinAccion
+
+
+
+// SOLUCION ANTERIOR
+// Error: no establece mayor - medio - menor, sino que ordena de menor a mayor
+
+ACCION 1.1.6 ES 
+    AMBIENTE
+
+        a, b, c, aux : entero
+
+    PROCESO
+
+        ESC("Ingrese tres valores: ")
+        LEER(a)
+        LEER(b)
+        LEER(c)
+
+        ESC("Los números introducidos son: ", a, b, c)
+
+        Si a > b entonces
+            aux := b
+            b := a
+            a := aux
+        FinSi
+
+        Si b > c entonces
+            aux := c 
+            c := b 
+            b := aux
+        FinSi
+        
+        ESC("Los números en orden son: ", a, b, c)
+FinAccion
