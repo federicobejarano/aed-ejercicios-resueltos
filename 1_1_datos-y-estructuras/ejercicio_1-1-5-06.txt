@@ -1,0 +1,11 @@
+/*
+
+Ejercicio 1.1.5.6¶
+Realizar un programa que lea dos número complejos, 
+
+(a,b) y (c,d), y calcule su producto:
+
+(a,b)∗(c,d)=(ac−db,ad+bc)
+
+*/
+

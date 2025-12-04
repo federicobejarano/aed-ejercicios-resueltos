@@ -1,0 +1,12 @@
+/*
+
+Ejercicio 1.1.5.4¶
+
+Se desea calcular la superficie de un trapecio, para la cual se ingresa la longitud de ambas bases y la altura. En base a la fórmula:
+
+S=(Bmay+Bmen)×h2
+
+Finalizando el proceso, emitir dicha superficie y los valores ingresados.
+
+*/
+
