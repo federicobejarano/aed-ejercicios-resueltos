@@ -6,6 +6,7 @@ los alumnos de una carrera dada que aprobaron alguna materia este año, con nota
 
 */
 
+
 ACCION 2.2.4 ES
 
     AMBIENTE
@@ -22,25 +23,68 @@ ACCION 2.2.4 ES
             Nota : (1..10)
         FinReg
 
+        MateriaAprobada
+            Fecha_Aprobacion : Fecha
+            Legajo_Alumno : N(6)
+            Materia : AN(30)
+            Nota_Final : N(1..10)
+        FinReg
+            
         Fecha = Registro
             aa = N(4)
             mm = N(2)
             dd = N(2)
         FinReg
 
-        ent, sal : archivo de Alumno ordenado por Apellido_Nombre
+        alumnos_e, alumnos_s : archivo de Alumno ordenado por Legajo
+        materias : archivo de MateriaAprobada ordenado por Fecha_Aprobacion y Legajo_Alumno
         alumno : Alumno
+        materia : Materia
+
+        Funcion Obtener_Carrera(c : entero) : cadena de caracter ES
+            segun c Hacer
+                = 1 : Obtener_Carrera := 'ISI'
+                = 2 : Obtener_Carrera := 'IEM'
+                = 3 : Obtener_Carrera := 'IQ'
+                Otros : Obtener_Carrera := ' '
+            FinSegun
+        FinFuncion 
+
+        Funcion Pedir_Carrera() : entero ES
+
+            AMBIENTE
+                opcion : entero
+                carrera : cadena de caracter
+
+            PROCESO
+                Repetir
+                    ESC("Elija la carrera:")
+                    ESC("1 = ISI")
+                    ESC("2 = IEM")
+                    ESC("3 = IQ")
+                    ESC("0 = salir")
+
+                    Si (opcion > 3) entonces
+                        ESC("Valor incorrecto. Reintente")
+                    FinSi
+                Mientras opcion > 3
+                
+                carrera := Obtener_Carrera(opcion)
+                Pedir_Carrera := opcion
+        FinFunc
 
     PROCESO
 
-        Abrir E/(ent)
-        Leer(ent, alumno)
+        Abrir E/(alumnos_e)
+        Abrir E/(materias)
+        Leer(materias, materia)
+        Leer(alumnos_e, alumno)
 
-        Abrir /S(sal)
+        Abrir /S(alumnos_s)
 
-        Mientras NFDA (ent) Hacer
-            
-        FinMientras
+        Si Pedir_Carrera() <> 0 entonces
+
+        FinSi
 
         Cerrar(ent)
         Cerrar(sal)

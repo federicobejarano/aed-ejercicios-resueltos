@@ -4,3 +4,25 @@ Ejercicio 1.1.11¶
 Dado un año ingresado por el usuario, emitir el mensaje 'ACTUAL' si corresponde al año en curso, 'PASADO' si es menor y 'FUTURO' si es mayor.
 
 */
+
+ACCION 1.1.11 (a_usuario : N(4)) ES
+
+    AMBIENTE
+
+        a_actual : N(4)
+
+    PROCESO
+
+        a_actual := Año_Actual // obtener año del sistema
+
+        Si a_usuario = a_actual entonces
+            ESC('ACTUAL')
+        Sino
+            Si a_usuario < a_actual entonces
+                ESC('PASADO')
+            Sino
+                ESC('FUTURO')
+            FinSi 
+        FinSi
+        
+FinAccion
