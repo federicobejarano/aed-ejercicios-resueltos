@@ -4,3 +4,28 @@ Ejercicio 1.1.19¶
 Escribir un algoritmo que ingrese una variable V y emita el valor de ésta, su cuadrado y su cubo.
 
 */
+
+ACCION 1.1.9 ES
+
+    AMBIENTE
+
+        v, x : entero 
+
+    PROCESO 
+
+        ESC("Ingrese un entero: ")
+        LEER(v)
+
+        x := 1
+
+        Para i := 1 hasta 3 hacer
+            Segun i hacer
+                = 1 : ESC("Valor ingresado: ")
+                = 2 : ESC("Cuadrado: ")
+                = 3 : ESC("Cubo: ")
+            FinSegun
+            
+            x := x * v
+            ESC(x)
+        FinPara
+FinAccion

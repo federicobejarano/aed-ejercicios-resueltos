@@ -22,7 +22,7 @@ Estos ejercicios se centran en la aplicación directa de estructuras condicional
 
 |Hecho| Orden | Ejercicio | Consigna | Requisitos Clave | Fuente |
 | :---: | :---: | :---: | :--- | :--- | :--- |
-|| **1** | 1.1.19 | Ingresar una variable V y emitir su valor, su cuadrado y su cubo | **E/S y Aritmética básica** | |
+|✅| **1** | 1.1.19 | Ingresar una variable V y emitir su valor, su cuadrado y su cubo | **E/S y Aritmética básica** | |
 || **2** | 1.1.11 | Dado un año, emitir si es 'ACTUAL', 'PASADO' o 'FUTURO' | **Condicional Simple** (comparación) | |
 || **3** | 1.1.10 | Determinar si A es divisor de B o B es divisor de A | **Condicional Simple** (operación módulo) | |
 || **4** | 1.1.7 | Calcular una suma de dos números e imprimir mensaje según rangos (Suma $\le 50$, $50 < \text{Suma} \le 100$, etc.) | **Condicional Múltiple** (rangos) | |
