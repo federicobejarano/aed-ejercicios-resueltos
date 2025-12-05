@@ -1,6 +1,43 @@
 /*
 
 Ejercicio 1.1.10¶
-Dados dos números enteros A y B generar un algoritmo que permita determinar si A es divisor de B o B es divisor de A.
+Dados dos números enteros A y B generar un algoritmo que permita determinar
+si A es divisor de B o B es divisor de A.
 
 */
+
+ACCION 1.1.10 ES 
+    AMBIENTE
+
+        a, b : entero
+
+    PROCESO
+
+        // evaluar si B es divisor de A
+
+        Si b <> 0 entonces
+            Si a mod b = 0 entonces 
+                ESC(b, "es divisor de ", a)
+            FinSi
+        Sino
+            Si a <> 0 entonces
+                ESC(a, "es divisor de ", b)
+            Sino
+                ESC("Error: valor indefinido")
+            FinSi
+        FinSi
+
+        // evaluar si A es divisor de B
+
+        Si a <> 0 entonces
+            Si b mod a = 0 entonces
+                ESC(a, "es divisor de ", b)
+            FinSi
+        Sino
+            Si b <> 0 entonces
+                ESC(b, "es divisor de ", a)
+            Sino
+                ESC("Error: valor indefinido")
+            FinSi
+        FinSi
+FinAccion

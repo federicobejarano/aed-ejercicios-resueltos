@@ -6,15 +6,9 @@ Acá llevo el registro de los ejercicios resueltos...
 
 ## 1. **Elementales**
 
-### 1.1. [Datos y Estructuras](https://aed-frre.github.io/practica/1.1/)
+### [1.1. Datos y Estructuras](https://aed-frre.github.io/practica/1.1/)
 
 #### Estructuras Secuenciales
-
-- Completado: 1/7
-
-| Ejercicio | Observaciones |
-| --------- | ------------- |
-| 1.1.5.7   |               |
 
 ###### I. Ejercicios Fundamentales
 
@@ -24,7 +18,7 @@ Estos ejercicios se centran en la aplicación directa de estructuras condicional
 | :---: | :----: | :--------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------- | :----- |
 |  ✅   | **1**  | [1.1.19](https://github.com/federicobejarano/aed-ejercicios-resueltos/blob/main/1_1_b_condicionales-y-repetitivas/ejercicio_1.1.19.txt)  | Ingresar una variable V y emitir su valor, su cuadrado y su cubo                                                                 | **E/S y Aritmética básica**                            |        |
 |  ✅   | **2**  | [1.1.11](https://github.com/federicobejarano/aed-ejercicios-resueltos/blob/main/1_1_b_condicionales-y-repetitivas/ejercicio_1.1.11.txt)  | Dado un año, emitir si es 'ACTUAL', 'PASADO' o 'FUTURO'                                                                          | **Condicional Simple** (comparación)                   |        |
-|       | **3**  |                                                                  1.1.10                                                                  | Determinar si A es divisor de B o B es divisor de A                                                                              | **Condicional Simple** (operación módulo)              |        |
+|  ✅   | **3**  | [1.1.10](https://github.com/federicobejarano/aed-ejercicios-resueltos/blob/main/1_1_b_condicionales-y-repetitivas/ejercicio_1.1.10.txt)  | Determinar si A es divisor de B o B es divisor de A                                                                              | **Condicional Simple** (operación módulo)              |        |
 |       | **4**  |                                                                  1.1.7                                                                   | Calcular una suma de dos números e imprimir mensaje según rangos (Suma $\le 50$, $50 < \text{Suma} \le 100$, etc.)               | **Condicional Múltiple** (rangos)                      |        |
 |       | **5**  |                                                                  1.1.9                                                                   | Determinar si una suma de dólares ahorrada es suficiente para una cantidad de euros requerida, calculando la diferencia en pesos | **Aritmética, Condicional y Conversión**               |        |
 |  ✅   | **6**  | [1.1.6](https://github.com/federicobejarano/aed-ejercicios-resueltos/blob/main/2_1_secuencias-de-datos-elementales/ejercicio_2.1.06.txt) | Ingresar 3 valores numéricos y determinar cuál es el mayor, el medio y el menor                                                  | **Condicional Anidada** (ordenamiento por comparación) |        |
@@ -72,14 +66,45 @@ Estos ejercicios requieren estructuras de control más avanzadas, como **bucles 
 | **6** |  1.1.32   | Determinar la fecha del domingo de Pascua para los años comprendidos entre **1990 y 2010**                                                                                        | **Bucle Fijo** (recorrido de años) y **Algoritmo Especializado de Cálculo** (secuencia de modulo y aritmética) |        |
 | **7** |  1.1.31   | Calcular el peso de varias piezas de tela según calidad, material, porcentaje por apresto (2% seda, 7% algodón) y peso del núcleo (400g/300g), finalizando al ingresar FIN = 'SI' | **Bucle Centinela** (FIN='SI') y **Lógica de Negocio Condicional Extrema** (múltiples variables dependientes)  |        |
 
-**Estructuras Condicionales y Repetitivas**
+### [1.2. Subacciones](https://aed-frre.github.io/practica/1.1/)
 
-- Completado : 0/30
+---
 
-| Ejercicio | Observaciones |
-| --------- | ------------- |
-| 1.1.6     | ---           |
+## 2. **Secuencias**
 
-###### Subacciones
+### [2.1. Secuencias de Datos Elementales](https://aed-frre.github.io/practica/2.1/)
 
-### 1.2. [Subacciones](https://aed-frre.github.io/practica/1.1/)
+###### I. Ejercicios Esenciales (Fundamentos y Operaciones Básicas)
+
+Estos ejercicios se centran en el recorrido fundamental de secuencias, el conteo simple y el filtrado básico, sirviendo como base para problemas más complejos.
+
+| Orden | Ejercicio  | Descripción                                                                                                                                                                                                         |
+| :---: | :--------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **1** | **2.1.04** | **Contar la cantidad de socios registrados** en una secuencia de números enteros de socios. (Se enfoca en el recorrido completo de la secuencia y el conteo total).                                                 |
+| **2** | **2.1.01** | **Contar cuántas letras "A"** hay en una secuencia de letras del alfabeto que finaliza con la marca '\*'. (Introduce el conteo con una condición simple de detención).                                              |
+| **3** | **2.1.03** | **Copiar la secuencia de entrada a una secuencia de salida, descartando el caracter "$"**. (Introduce el filtrado y la creación de una nueva secuencia de salida).                                                  |
+| **4** | **2.1.07** | **Generar una secuencia de salida con los CUITs (enteros)** de los empleados cuyo número de documento termine en 0, 1, 2 o 3. (Aplica filtrado numérico utilizando la operación módulo).                            |
+| **5** | **2.1.02** | **Contar cuántas consonantes** hay en una secuencia de letras del alfabeto que finaliza con la letra "Z". (Introduce la necesidad de una función auxiliar, `Es_Consonante`, para definir la condición de filtrado). |
+
+###### II. Ejercicios de Refuerzo (Análisis de Palabras y Lógica de Generación)
+
+Estos ejercicios requieren manejar el concepto de estado (dentro/fuera de una palabra) o implementar lógica para generar o comparar elementos secuenciales, no solo contarlos.
+
+| Orden | Ejercicio  | Descripción                                                                                                                                                                                                                                                                                                                                             |
+| :---: | :--------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **1** | **2.1.09** | **Determinar la cantidad de palabras que comienzan con la letra 'I'** en una secuencia de caracteres. (Introduce la lógica de detección de palabras y manejo de espacios como delimitadores).                                                                                                                                                           |
+| **2** | **2.1.10** | **Contar la cantidad de palabras que comienzan con una letra dada**. (Generalización del ejercicio 2.1.09, aplicando la misma lógica a una letra variable).                                                                                                                                                                                             |
+| **3** | **2.1.11** | **Determinar la cantidad de palabras de exactamente 4 caracteres (letras)** en una secuencia de caracteres. (Añade la complejidad de contar la longitud dentro de cada palabra).                                                                                                                                                                        |
+| **4** | **2.1.12** | **Listar las palabras** de una secuencia de caracteres **que comiencen con "ALG"**. (Implica lógica de detección de palabras y verificación de prefijo de múltiples caracteres).                                                                                                                                                                        |
+| **5** | **2.1.05** | Dada una secuencia de números de socios (ordenados pero no correlativos), **generar una secuencia que contenga los números de socios que no figuran** en la secuencia de entrada. (Es un ejercicio de refuerzo crucial ya que requiere generar datos de salida basados en la brecha entre los datos de entrada, en lugar de solo leerlos y filtrarlos). |
+
+###### III. Ejercicios Opcionales (Transformación Avanzada, Estadísticas y Manejo de Grupos)
+
+Estos ejercicios involucran transformaciones complejas, cálculo estadístico o manejo de estructuras de datos agrupadas/delimitadas, y a menudo se basan en la resolución de ejercicios anteriores.
+
+| Orden | Ejercicio  | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| :---: | :--------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **1** | **2.1.13** | **Determinar el porcentaje** que representan **las palabras que comienzan con "ALG"** sobre el total de palabras de la secuencia. (Requiere aplicar las técnicas de conteo de palabras y prefijos del ejercicio 2.1.12 y calcular estadísticas).                                                                                                                                                                                                                                                                |
+| **2** | **2.1.08** | A partir del ejercicio 2.1.07, generar una **secuencia de salida de caracteres** (en lugar de enteros) y **separar los CUITs con el caracter "-"**. (Requiere funciones de conversión de entero a caracter y lógica compleja para la inserción condicional del separador).                                                                                                                                                                                                                                      |
+| **3** | **2.1.14** | **Contar la cantidad de caracteres** (incluidos los espacios) **que existen entre una coma y la siguiente**. (Requiere lógica compleja de estado para descartar sub-secuencias iniciales/finales y enfocarse solo en el conteo entre delimitadores consecutivos).                                                                                                                                                                                                                                               |
+| **4** | **2.1.06** | Dada una secuencia de enteros que almacena la cantidad de habitantes de 23 ciudades capitales (discriminados en 4 categorías por sexo y edad), **determinar la población total y los porcentajes** de masculinos, femeninos, mayores y menores de 18. (Es el ejercicio más complejo, ya que requiere procesar datos agrupados (4 categorías por ciudad) y realizar cálculos acumulativos y porcentuales utilizando estructuras como `segun` y operaciones de módulo para el control del ciclo de agrupamiento). |
