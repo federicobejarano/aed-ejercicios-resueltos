@@ -1,0 +1,7 @@
+/*
+
+Ejercicio 1.2.5¶
+Escribir una función que verifique si un caracter introducido es un dígito o no.
+
+*/
+

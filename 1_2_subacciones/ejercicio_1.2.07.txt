@@ -1,0 +1,8 @@
+/*
+
+Procedimientos¶
+Ejercicio 1.2.7¶
+Repita el ejercicio del punto 5 pero utilice procedimiento en lugar de función.
+
+*/
+

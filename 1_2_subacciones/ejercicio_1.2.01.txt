@@ -1,0 +1,5 @@
+/*
+Ejercicio 1.2.1¶
+Realice una función que dado un número devuelva su cuadrado.
+
+*/
