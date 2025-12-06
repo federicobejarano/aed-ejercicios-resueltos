@@ -4,3 +4,52 @@ Se dispone de una secuencia de caracteres.
 Se desea listar las palabras que comiencen con "ALG".
 
 */
+
+ACCION 2.1.12 ES
+
+    AMBIENTE
+
+        sec, lista : secuencia de caracter
+        v : caracter
+
+    PROCESO
+
+        ARR(sec)
+        AVZ(sec, v)
+        CREAR(lista)
+
+        Mientras NFDS(sec) Hacer
+
+            Mientras (v = " ")
+                AVZ(sec, v)
+            FinMientras
+
+            Si (v = "A") entonces
+                AVZ(sec, v)
+
+                Si (v = "L") entonces
+                    AVZ(sec, v)
+
+                    Si (v = "G") entonces
+                        ESC(lista, "ALG")
+
+                        Mientras (v <> " ") Hacer 
+                            AVZ(sec, v)
+                            ESC(lista, v)
+                        FinMientras
+
+                        ESC(lista, "-")
+                    FinSi 
+                FinSi
+            Sino 
+                Mientras (v <> " ") Hacer
+                    AVZ(sec, v)
+                FinMientras 
+            FinSi 
+
+        FinMientras
+
+        CERRAR(sec)
+        CERRAR(lista)
+
+FinAccion
