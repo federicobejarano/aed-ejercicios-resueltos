@@ -5,3 +5,24 @@ Crear un procedimiento que intercambie los valores de dos variables numéricas.
 
 */
 
+ACCION 1.2.8 ES
+
+    AMBIENTE
+
+        a, b, aux : entero
+
+        Procedimiento Intercambiar() Es 
+            aux := a 
+            b := a 
+            a := aux 
+        FinProcedimiento
+
+    PROCESO 
+
+        ESC("Ingrese dos valores...")
+        LEER(a)
+        LEER(b)
+
+        Intercambiar()
+
+FinAccion

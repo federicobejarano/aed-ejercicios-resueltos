@@ -4,3 +4,25 @@ Ejercicio 1.1.17¶
 Elabore un algoritmo que calcule el producto de dos enteros A y B empleando sólo la operación suma.
 
 */
+
+ACCION 1.1.17 ES 
+
+    AMBIENTE
+
+        a, b, prod : entero
+
+    PROCESO 
+
+        ESC("Ingrese dos valores...")
+        LEER(a)
+        LEER(b)
+
+        prod := 0
+
+        Para i:=1 hasta b Hacer
+            prod := prod + a
+        FinPara
+
+        ESC(a, " x ", b, " = ", prod)
+
+FinAccion
