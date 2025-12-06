@@ -4,3 +4,43 @@ Se dispone de una secuencia de caracteres.
 Se desea permita contar la cantidad de palabras que comienzan con una letra dada.
 
 */
+
+ACCION 2.1.10 ES
+
+    AMBIENTE
+
+        sec : secuencia de caracter 
+        c, v : caracter 
+        cant : entero
+
+    PROCESO
+
+        ESC("Ingrese una letra...")
+        LEER(c)
+
+        ARR(sec)
+        AVZ(sec, v)
+        cant := 0
+
+        Mientras NFDS (sec) Hacer
+            Mientras (v = " ") Hacer
+                AVZ(sec, v)
+            FinMientras
+
+            Si (v = c) entonces
+                cant := cant + 1
+            FinSi
+
+            Mientras (v <> " ") Hacer
+                AVZ(sec, v)
+            FinMientras
+        FinMientras
+
+        Si (cant <> 0) Hacer
+            ESC("La secuencia contiene el caracter ", c, " un total de ", cant, " veces")
+        Sino
+            ESC("La secuencia no contiene palabras que inician en ", c)
+        FinSi
+
+        CERRAR(sec)
+FinAccion
