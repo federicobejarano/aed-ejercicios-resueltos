@@ -3,3 +3,22 @@ Ejercicio 1.2.1¶
 Realice una función que dado un número devuelva su cuadrado.
 
 */
+
+ACCION 1.2.1 ES
+
+    AMBIENTE
+
+        num : entero
+
+        Funcion Cuadrado(n : entero) : entero ES
+            Cuadrado := n * n
+        FinFuncion
+        
+    PROCESO
+
+        ESC("Ingrese un número...")
+        Leer(num)
+
+        ESC("El cuadrado de ", num, " es: " Cuadrado(num))
+
+FinAccion

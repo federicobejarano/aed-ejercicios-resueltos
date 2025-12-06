@@ -5,3 +5,34 @@ Diseñe una función que devuelva la suma de los dígitos del número natural su
 
 */
 
+ACCION 1.2.2 ES
+
+    AMBIENTE
+
+        num : entero
+
+        Funcion Sumar_Digitos(n : entero) : entero ES
+            AMBIENTE
+
+                dig, sum : entero
+
+            PROCESO
+                sum := 0
+                Mientras n > 0 Hacer
+                    dig := n MOD 10      
+                    sum := sum + dig 
+                    n := n DIV 10
+                FinMientras
+
+                Sumar_Digitos := sum
+        FinFuncion
+
+    PROCESO
+
+        ESC("Ingrese un valor: ")
+        Leer(num)
+
+        ESC("La suma de los dígitos de", num, " es: ", Sumar_Digitos(num))
+
+FinAccion
+
